@@ -8,7 +8,7 @@ my dotfiles, as a (collection of) [home-manager](https://github.com/nix-communit
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.home-manager.url = "github:nix-community/home-manager/release-21.05";
-  inputs.dotfiles.url = "path:/Users/jinnah/Repos/dotfiles";
+  inputs.dotfiles.url = "github:jali-clarke/dotfiles";
 
   outputs = { self, nixpkgs, home-manager, dotfiles, ... }:
     {
