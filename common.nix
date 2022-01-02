@@ -1,4 +1,6 @@
 { pkgs, ... }: {
+  nixpkgs.config.allowUnfree = true;
+
   programs.direnv = {
     enable = true;
     nix-direnv = {
