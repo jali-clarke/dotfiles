@@ -1,5 +1,5 @@
 {
   outputs = { self }: {
-    homeManagerModule = import ./common.nix;
+    homeManagerModule = import ./configs;
   };
 }
