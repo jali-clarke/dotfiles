@@ -17,7 +17,7 @@
         }:
         home-manager.lib.homeManagerConfiguration {
           inherit system username homeDirectory pkgs;
-          configuration = configuration // { imports = [ homeManagerModule ]; };
+          configuration = { imports = [ homeManagerModule configuration ]; };
         };
     };
   };
