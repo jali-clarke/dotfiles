@@ -8,6 +8,7 @@
     };
   };
 
-  config.dotfiles.config."direnv/direnvrc" =
-    assert config.programs.direnv.enable; config.lib.dotfiles.fromSimpleXDG config.xdg.configFile."direnv/direnvrc";
+  config.dotfiles.config = lib.mkIf config.programs.direnv.enable {
+    "direnv/direnvrc" = config.lib.dotfiles.fromSimpleXDG config.xdg.configFile."direnv/direnvrc";
+  };
 }

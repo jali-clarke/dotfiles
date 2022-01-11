@@ -11,8 +11,8 @@
     '';
   };
 
-  config.dotfiles.config = {
-    ".zshenv" = assert config.programs.zsh.enable; config.lib.dotfiles.fromSimpleXDG config.home.file.".zshenv";
-    ".zshrc" = assert config.programs.zsh.enable; config.lib.dotfiles.fromSimpleXDG config.home.file.".zshrc";
+  config.dotfiles.config = lib.mkIf config.programs.zsh.enable {
+    ".zshenv" = config.lib.dotfiles.fromSimpleXDG config.home.file.".zshenv";
+    ".zshrc" = config.lib.dotfiles.fromSimpleXDG config.home.file.".zshrc";
   };
 }

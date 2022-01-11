@@ -20,6 +20,7 @@
     };
   };
 
-  config.dotfiles.config."git/config" =
-    assert config.programs.git.enable; config.lib.dotfiles.fromSimpleXDG config.xdg.configFile."git/config";
+  config.dotfiles.config = lib.mkIf config.programs.git.enable {
+    "git/config" = config.lib.dotfiles.fromSimpleXDG config.xdg.configFile."git/config";
+  };
 }
