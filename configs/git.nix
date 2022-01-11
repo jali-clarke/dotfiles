@@ -1,7 +1,7 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   config.programs.git = {
-    enable = true;
+    enable = lib.mkDefault config.dotfiles.enableAll;
     lfs.enable = true;
     delta.enable = true;
 
@@ -20,6 +20,6 @@
     };
   };
 
-  config.dotfiles-with-targets."git/config" =
-    config.lib.dotfiles-with-targets.fromSimpleXDG config.xdg.configFile."git/config";
+  config.dotfiles.config."git/config" =
+    assert config.programs.git.enable; config.lib.dotfiles.fromSimpleXDG config.xdg.configFile."git/config";
 }

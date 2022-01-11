@@ -1,6 +1,6 @@
 # dotfiles
 
-my dotfiles, as a (collection of) [home-manager](https://github.com/nix-community/home-manager) module(s).
+my dotfiles, as a (collection of) [home-manager](https://github.com/nix-community/home-manager) module(s).  `program.x.enable` options are intentionally omitted; installation of things should be explicitly opt-in
 
 ## example usage
 

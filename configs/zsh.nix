@@ -1,7 +1,7 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   config.programs.zsh = {
-    enable = true;
+    enable = lib.mkDefault config.dotfiles.enableAll;
     oh-my-zsh = {
       enable = true;
       theme = "robbyrussell";
@@ -11,8 +11,8 @@
     '';
   };
 
-  config.dotfiles-with-targets = {
-    ".zshenv" = config.lib.dotfiles-with-targets.fromSimpleXDG config.home.file.".zshenv";
-    ".zshrc" = config.lib.dotfiles-with-targets.fromSimpleXDG config.home.file.".zshrc";
+  config.dotfiles.config = {
+    ".zshenv" = assert config.programs.zsh.enable; config.lib.dotfiles.fromSimpleXDG config.home.file.".zshenv";
+    ".zshrc" = assert config.programs.zsh.enable; config.lib.dotfiles.fromSimpleXDG config.home.file.".zshrc";
   };
 }

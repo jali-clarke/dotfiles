@@ -1,6 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, config, lib, ... }: {
+  nixpkgs.config.allowUnfree = if config.programs.vscode.enable then lib.mkForce true else lib.mkDefault false;
+
   programs.vscode = {
-    enable = true;
+    enable = lib.mkDefault config.dotfiles.enableAll;
     extensions =
       let exts = pkgs.vscode-extensions;
       in

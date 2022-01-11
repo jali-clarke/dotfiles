@@ -1,6 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, config, lib, ... }: {
   programs.fzf = rec {
-    enable = true;
+    enable = lib.mkDefault config.dotfiles.enableAll;
     enableZshIntegration = true;
 
     defaultCommand = "${pkgs.fd}/bin/fd --type f";
