@@ -9,7 +9,10 @@ my dotfiles, as a (collection of) [home-manager](https://github.com/nix-communit
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.home-manager.url = "github:nix-community/home-manager/release-21.05";
   inputs.dotfiles.url = "github:jali-clarke/dotfiles";
-  # can also have inputs.home-manager.follows = "dotfiles/home-manager";
+  # can also have:
+  #  inputs.home-manager.follows = "dotfiles/home-manager";
+  #  inputs.dotfiles.inputs.nixpkgs.follows = "nixpkgs";
+  #  etc
 
   outputs = { self, nixpkgs, home-manager, dotfiles, ... }:
     {
