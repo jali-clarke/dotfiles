@@ -17,6 +17,8 @@
       fixupa = "commit -a --fixup";
       pushf = "push --force-with-lease";
       pushuo = "!git push -u origin $(git branchc)";
+      rp = "rev-parse";
+      rps = "rev-parse --short";
     };
   };
 
