@@ -3,17 +3,7 @@
 
   config.programs.vscode = {
     enable = lib.mkDefault config.dotfiles.enableAll;
-    extensions =
-      let exts = pkgs.vscode-extensions;
-      in
-      [
-        exts._4ops.terraform
-        exts.bbenoist.nix
-        exts.brettm12345.nixfmt-vscode
-        exts.dhall.dhall-lang
-        exts.eamodio.gitlens
-        exts.justusadam.language-haskell
-      ];
+    extensions = pkgs.callPackage ./extensions {};
 
     userSettings = {
       "files.autoSave" = "afterDelay";

@@ -7,7 +7,7 @@ in
     ./direnv.nix
     ./fzf.nix
     ./git.nix
-    ./vscode.nix
+    ./vscode
     ./zsh.nix
   ];
 
