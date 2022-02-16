@@ -2,10 +2,7 @@
 {
   config.programs.direnv = {
     enable = lib.mkDefault config.dotfiles.enableAll;
-    nix-direnv = {
-      enable = true;
-      enableFlakes = true;
-    };
+    nix-direnv.enable = true;
   };
 
   config.dotfiles.config = lib.mkIf config.programs.direnv.enable {
