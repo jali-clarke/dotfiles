@@ -1,7 +1,7 @@
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-  inputs.home-manager.url = "github:nix-community/home-manager/release-21.11";
+  inputs.home-manager.url = "github:nix-community/home-manager/master";
   inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
   inputs.flake-templates.url = "github:jali-clarke/flake-templates";
