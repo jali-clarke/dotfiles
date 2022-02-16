@@ -1,3 +1,4 @@
+flakeInputs:
 { config, lib, ... }:
 let
   inherit (lib) mkOption types;
@@ -7,6 +8,7 @@ in
     ./direnv.nix
     ./fzf.nix
     ./git.nix
+    (import ./nix.nix flakeInputs)
     ./vscode
     ./zsh.nix
   ];
@@ -21,6 +23,11 @@ in
     enableAll = mkOption {
       type = types.bool;
       default = false;
+    };
+
+    useNixRegistry = mkOption {
+      type = types.bool;
+      default = config.dotfiles.enableAll;
     };
 
     config = mkOption {

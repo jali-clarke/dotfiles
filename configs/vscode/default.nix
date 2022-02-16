@@ -3,7 +3,7 @@
 
   config.programs.vscode = {
     enable = lib.mkDefault config.dotfiles.enableAll;
-    extensions = pkgs.callPackage ./extensions {};
+    extensions = pkgs.callPackage ./extensions { };
 
     userSettings = {
       "files.autoSave" = "afterDelay";
