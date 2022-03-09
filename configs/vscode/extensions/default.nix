@@ -7,5 +7,6 @@
   vscode-extensions.eamodio.gitlens
   vscode-extensions.justusadam.language-haskell
 
+  (pkgs.callPackage ./cuelang.nix { })
   (pkgs.callPackage ./packer.nix { })
 ]
