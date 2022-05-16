@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1650815813,
-        "narHash": "sha256-PAhots4XQ+kih4kJQmUUg7oB0cM1eZ2xcRReI2rdrpA=",
+        "lastModified": 1652669513,
+        "narHash": "sha256-/BukA6lO/C6ndGPKkXJ9ttBQDi0YAS47KVxcQOlj+Zo=",
         "owner": "jali-clarke",
         "repo": "flake-templates",
-        "rev": "bd8ab30d89511f59a96110501ffa817095e53e8f",
+        "rev": "74dd437634d502ba183d68aa13f132ea6e7852b2",
         "type": "github"
       },
       "original": {
