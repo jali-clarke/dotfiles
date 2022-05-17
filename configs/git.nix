@@ -19,6 +19,7 @@
       reseto = "!git reset $(git brancho)";
       rp = "rev-parse";
       rps = "rev-parse --short";
+      root = "rev-parse --show-toplevel";
     };
   };
 
