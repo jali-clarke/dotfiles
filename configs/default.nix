@@ -14,7 +14,11 @@ in
   ];
 
   config.lib.dotfiles.fromSimpleXDG = xdgConfigFile: {
-    contents = xdgConfigFile.text;
+    contents =
+      if builtins.isNull xdgConfigFile.text
+      then builtins.readFile xdgConfigFile.source
+      else xdgConfigFile.text;
+
     file = xdgConfigFile.source;
     target = "${config.home.homeDirectory}/${xdgConfigFile.target}";
   };
