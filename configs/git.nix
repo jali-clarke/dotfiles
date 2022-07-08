@@ -5,7 +5,12 @@
     lfs.enable = true;
     delta.enable = true;
 
-    extraConfig = { pull.rebase = false; };
+    extraConfig = {
+      pull = {
+        ff = "only";
+        rebase = false;
+      };
+    };
 
     aliases = {
       autosquash = "!GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash";
