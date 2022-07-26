@@ -10,4 +10,5 @@
 
   (pkgs.callPackage ./cuelang.nix { })
   (pkgs.callPackage ./packer.nix { })
+  (pkgs.callPackage ./vscode-test-explorer.nix { })
 ]
