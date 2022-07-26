@@ -10,5 +10,6 @@
 
   (pkgs.callPackage ./cuelang.nix { })
   (pkgs.callPackage ./packer.nix { })
+  (pkgs.callPackage ./test-adapter-converter.nix { })
   (pkgs.callPackage ./vscode-test-explorer.nix { })
 ]
