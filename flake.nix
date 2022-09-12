@@ -6,7 +6,9 @@
 
   inputs.flake-templates.url = "github:jali-clarke/flake-templates";
 
-  outputs = flakeInputs@{ self, nixpkgs, home-manager, flake-templates }: {
+  inputs.flake-utils.url = "github:numtide/flake-utils";
+
+  outputs = flakeInputs@{ self, nixpkgs, home-manager, flake-templates, flake-utils }: {
     lib = rec {
       homeManagerModule = import ./configs flakeInputs;
       builtHomeManagerModule =
@@ -21,5 +23,17 @@
           configuration = { imports = [ homeManagerModule configuration ]; };
         };
     };
-  };
+  } // flake-utils.lib.eachDefaultSystem (
+    system:
+    let
+      pkgs = import nixpkgs { inherit system; };
+    in
+    {
+      devShells.default = pkgs.mkShell {
+        buildInputs = [
+          pkgs.nixpkgs-fmt
+        ];
+      };
+    }
+  );
 }
