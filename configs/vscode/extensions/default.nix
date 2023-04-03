@@ -1,6 +1,6 @@
 { pkgs, vscode-extensions }:
 [
-  vscode-extensions._4ops.terraform
+  vscode-extensions."4ops".terraform
   vscode-extensions.bbenoist.nix
   vscode-extensions.brettm12345.nixfmt-vscode
   vscode-extensions.dhall.dhall-lang
