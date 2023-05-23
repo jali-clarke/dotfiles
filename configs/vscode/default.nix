@@ -12,6 +12,7 @@
       "update.mode" = "none";
       "[nix]"."editor.tabSize" = 2;
       "[haskell]"."editor.tabSize" = 2;
+      "elmLS.disableElmLSDiagnostics" = true;
     };
   };
 
