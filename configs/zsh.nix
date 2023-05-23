@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 {
   config.programs.zsh = {
     enable = lib.mkDefault config.dotfiles.enableAll;
@@ -8,6 +8,7 @@
     };
     initExtra = ''
       bindkey "ç" fzf-cd-widget
+      eval "$(${pkgs.starship}/bin/starship init zsh)"
     '';
   };
 
