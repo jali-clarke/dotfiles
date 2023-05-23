@@ -12,6 +12,11 @@
       "update.mode" = "none";
       "[nix]"."editor.tabSize" = 2;
       "[haskell]"."editor.tabSize" = 2;
+
+      "elmLS.elmPath" = "${pkgs.elmPackages.elm}/bin/elm";
+      "elmLS.elmFormatPath" = "${pkgs.elmPackages.elm-format}/bin/elm-format";
+      "elmLS.elmReviewPath" = "${pkgs.elmPackages.elm-review}/bin/elm-review";
+      "elmLS.elmTestPath" = "${pkgs.elmPackages.elm-test}/bin/elm-test";
       "elmLS.disableElmLSDiagnostics" = true;
     };
   };
