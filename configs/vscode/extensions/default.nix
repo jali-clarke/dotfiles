@@ -2,6 +2,7 @@
 [
   vscode-extensions."4ops".terraform
   vscode-extensions.bbenoist.nix
+  vscode-extensions.bierner.markdown-mermaid
   vscode-extensions.brettm12345.nixfmt-vscode
   vscode-extensions.dhall.dhall-lang
   vscode-extensions.eamodio.gitlens
