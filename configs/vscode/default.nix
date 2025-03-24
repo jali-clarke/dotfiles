@@ -6,6 +6,7 @@
     extensions = pkgs.callPackage ./extensions { };
 
     userSettings = {
+      "extensions.autoCheckUpdates" = false;
       "files.autoSave" = "afterDelay";
       "window.zoomLevel" = 1;
       "workbench.editor.enablePreview" = false;
